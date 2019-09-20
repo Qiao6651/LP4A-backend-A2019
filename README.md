@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby version
 
-Things you may want to cover:
+> This project uses Ruby 2.6.4.
 
-* Ruby version
+## Compatible operating systems
 
-* System dependencies
+* Windows
+* Unix
 
-* Configuration
+## System dependencies
 
-* Database creation
+* Rails 5.2.3
+* (complete list will be released soon)
 
-* Database initialization
+## Configuration
 
-* How to run the test suite
+## Database creation
 
-* Services (job queues, cache servers, search engines, etc.)
+> No database yet.
 
-* Deployment instructions
+## Database initialization
 
-* ...
+> See above.
+
+## How to run the test suite
+
+> (tutorial will be released soon)
+
+# Author
+
+> Hicham ARAHHOU
