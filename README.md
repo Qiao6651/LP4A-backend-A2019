@@ -1,5 +1,6 @@
 # README
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/d646e64619ccddbf26c2/maintainability)](https://codeclimate.com/github/hicham-arahhou/LP4A-backend-A2019/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/d646e64619ccddbf26c2/test_coverage)](https://codeclimate.com/github/hicham-arahhou/LP4A-backend-A2019/test_coverage)
 ## Ruby version
 
 > This project uses Ruby 2.6.4.
