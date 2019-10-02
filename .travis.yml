@@ -1,20 +1,21 @@
 env:
   global:
-    - CC_TEST_REPORTER_ID=5c23c6a1dec69493c3d1838e590c187d882742cba0a3c63e43636b3d72c5ef63
+  - CC_TEST_REPORTER_ID=5c23c6a1dec69493c3d1838e590c187d882742cba0a3c63e43636b3d72c5ef63
 language: ruby
 rvm:
- - 2.6.4
+- 2.6.4
 before_script:
- - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
- - chmod +x ./cc-test-reporter
- - ./cc-test-reporter before-build
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+  > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- "./cc-test-reporter before-build"
 script:
- - bundle exec rails db:migrate RAILS_ENV=test
- - bundle exec rake
+- bundle exec rails db:migrate RAILS_ENV=test
+- bundle exec rake
 after_script:
- - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+- "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
 deploy:
   provider: heroku
   api_key:
-    secure: ww9VGgHuIGdqnNfqnkoI7xjUUUJ4xluWbjV2vK2StimpoFdWa56N/bLHmUeQt9s/vBdM6fF6pUuQYFkGioTHjr4GBT+Q6ns1KV+esQZN4JeeRnwfBPVxOhwzsCdlRiRiwzgp12ZTNMHOQpIfV6WSmNsBeGAKs2j15XJI6yRNXqwYvj0GY2hxij/00nhJAjWPxds5PkXHQWLwUt+UoUk+lQF5WZwRg4JIfnOdYdPGrvkQKrxjIB90XdRzSXiWHke0o19IM0yD/1pMBuxDjGt0mNKiPFdZCyBgZthMYX/iQVc6YHqedSICff/YYXe4tT1r46fxgv/R14z4pyz2iFaRwY7HY/iwqzlBelbllLkqOKhgYF7WL5Y8voQ+FJFREUdAkNquToiThUSVhILTiQ89MTQI6f0k+rysQ8FBpsK7L3QUhthUPUbRfcfHBmRmNkdgthR7z3idlz1QHm759ZtEf2pb0tue175Jsu8TWK5nz46FYrDYNzHWfAGfnBEHntjco7iRx/4jmMu0TwTEdNfwwO/DQ0Pl7ZwCM9XytpHBUki1WzLtMKfH08U3xXHS8YsKSe/UsswG4ydwg/9oxYJO+2SvUbo7UKe0NVbw+9nII9ICCzViueA8DUVQR1p2h5wFIZdMZH5mdIOjifEI2qIKIbf1AKplWH2gyfm6bHcnL1Y=
+    secure: SMd0vbbl4FaLNs9IamWdrwYr325MKx1Lti3upJUlAPXlnKdHvDBuTQUZ3S3jbphhLcn45hT9nmfd4gamL1S63vEMrfJtN8qK7hBH57pTumGoEjsaqqJrpvnNFzCrsRRh435+Pei6q8rptuv3Kyyw1554qJpEVOLJjtzyu2DaqBnzwPXUee2guL62XoRNFFkrnNO7oa48DRpOF69IVEsAlOLi4bHetlLZHC7wgvgCiGyqh9nPvcaMUvv7YIKecgHAzBUGztW30wsuKxd9ZfCaOXacrNUXkOp3rf1xRHCgP0W5tYC5VC5oGROkf6hkE94plZ7JDeFeolj5laS0mvqWdRWLRXFQy9lFamfyaghLTMqdYsMRm9+wQ21d5XnPnMCbYBSJdEVtN3UI4GmPrrjnvDu20xPOBkNJm+efwSDf3JJSKRzBXfHk5MRFD9sGYa+5TnAyoNfeWK0MxIbtlG5csKU0u7H2QV/tvOFX9Rs1sTNMhdi0Sl2+yFvm7pkj/jOkIgLoNrfAwCwenXdcQsNIqBAF4mjkrfhToPjsmWfoO+lfj20NcAVznrToJgfRr0a/u5EW81/LAWIBWvmJfjgoF8DURMhRyG8txZegf1ANNGKfSrUF00+0eV08N9RS33h1wu+f9+gAkxMK4o6GnWBZjBRsX+XSWihJwjxtByKoAMk=
   app: lp4a-backend-a2019
